@@ -6,10 +6,14 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import pokemon from './assets/img/pokemon.jpg'
+
+console.log('process.env.PUBLIC_URL', process.env.PUBLIC_URL)
+console.log('process.env.REACT_APP_BASENAME', process.env.REACT_APP_BASENAME)
 
 function App() {
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router basename={process.env.REACT_APP_BASENAME}>
       <div>
         <ul>
           <li>
@@ -43,6 +47,7 @@ function Home() {
     <div>
       <h2>Home</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi consectetur in, ipsam maxime recusandae unde? Ab accusamus amet error laudantium nihil odit quam rem repellat repellendus sapiente. Commodi, in, nesciunt.</p>
+      <img src={pokemon} alt='pokemon'/>
     </div>
   );
 }
@@ -52,6 +57,7 @@ function About() {
     <div>
       <h2>About</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi consectetur in, ipsam maxime recusandae unde? Ab accusamus amet error laudantium nihil odit quam rem repellat repellendus sapiente. Commodi, in, nesciunt.</p>
+      <img src={pokemon} alt='pokemon'/>
     </div>
   );
 }

@@ -36,19 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-
-/* roboto-condensed-regular - latin */
-@font-face {
-  font-family: 'Roboto Condensed';
-  font-style: normal;
-  font-weight: 400;
-  font-display: block;
-  src: local('Roboto Condensed'), local('RobotoCondensed-Regular'),
-  url('./fonts/roboto-condensed-v18-latin/roboto-condensed-v18-latin-regular.woff2') format('woff2'),
-  url('./fonts/roboto-condensed-v18-latin/roboto-condensed-v18-latin-regular.woff') format('woff');
-}
-
-h1, h2, p {
-  font-family: "Roboto Condensed", sans-serif;
-}

@@ -3,9 +3,9 @@ provider:
   name: openfaas
   gateway: http://127.0.0.1:8080
 functions:
-  openfaas-font:
+  openfaas-node12-react:
     lang: node12
     handler: ./function
-    image: janakasteph/openfaas-font
+    image: janakasteph/openfaas-node12-react
     environment:
       write_debug: true

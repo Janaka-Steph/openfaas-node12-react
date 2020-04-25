@@ -2,7 +2,7 @@
 
 const fs = require('fs')
 const fsPromises = fs.promises
-//const mime = require('mime-types')
+const mime = require('mime-types')
 
 
 module.exports = async (event, context) => {
@@ -18,13 +18,14 @@ module.exports = async (event, context) => {
 
   const headers = {'Content-Type': ''}
 
-  /*
-  if (path !== '/') {
+
+  if (mime.lookup(path)) {
     console.log('PATH MIME: ', path, mime.lookup(path))
     headers['Content-Type'] = mime.lookup(path)
   }
-  */
 
+
+  /*
   if (/.*\.js/.test(path)) {
     headers['Content-Type'] = 'application/javascript'
   } else if (/.*\.css/.test(path)) {
@@ -36,6 +37,7 @@ module.exports = async (event, context) => {
   } else if (/.*\.map/.test(path)) {
     headers['Content-Type'] = 'application/octet-stream'
   }
+  */
 
 
   // /home/app/function/build${path}

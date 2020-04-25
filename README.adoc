@@ -1,1 +1,33 @@
-# React.js SPA
+= React.js SPA
+
+== Issue #1
+
+The `function/build` folder is not pushed into the container.
+
+Step to reproduce:
+
+.In one tab
+ kubectl port-forward svc/gateway -n openfaas 8080:8080
+
+.In a other tab
+ cd function
+
+ npm i
+
+ npm run build
+
+ cd ..
+
+ faas up
+
+A workaround is to add a build step to the node12 template's Dockerfile.
+
+
+== Issue #2
+
+Everything works fine locally with `npm start`.
+The `Dancing Script` font is applied, and the pokemon image is displayed.
+
+In production, having a build folder in place, the font is not applied, and the image is not displayed.
+
+The paths and mime types are correct.
